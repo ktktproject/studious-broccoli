@@ -1,0 +1,169 @@
+﻿# A5:ER FORMAT:12
+# A5:ER ENCODING:UTF8
+# A5:ER Mk-1 Copyright (C)2007 m.matsubara
+# A5:SQL Mk-2 Copyright (C)1997 m.matsubara
+#  http://www.wind.sannet.ne.jp/m_matsu/developer/a5m2/
+
+[Manager]
+ProjectName=quiz
+Author=
+MaxEntityRowShow=1000
+ReadOnlyRecommend=0
+Page=Main
+PageInfo="Main",7,"A3Landscape",$FFFFFF
+LogicalView=1
+DecodeDomain=0
+ViewModePageIndividually=1
+ViewMode=7
+ViewFormat=0
+UseNondependenceDashLine=0
+FontName=Tahoma
+FontSize=6
+PaperSize=A4Landscape
+HeaderLeft=
+HeaderCenter=
+HeaderRight=
+FooterLeft=
+FooterCenter=
+FooterRight=
+ShowPageoutRelation=1
+RDBMSType=6
+RDBMSTypeName=PostgreSQL
+DefaultPkName=%0:s_PKC
+DefaultPkIndexName=%0:s_PKI
+DefaultIndexName=%0:s_IX%1:d
+DefaultFkName=%0:s_FK%1:d
+SqlSeparator=0
+ShowTag=1
+ShowCommonAttributes=0
+
+[Relation]
+Entity1=genre
+Entity2=category
+RelationType1=4
+RelationType2=2
+Fields1=category_id
+Fields2=id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,1701,8299,1738,R,R
+Dependence=0
+Caption=
+PName=
+ModifiedDateTime=20190313115023
+LineMode=0
+Bar1=170
+Bar2=830
+Bar3=174
+TermPos1=R
+TermPos2=R
+
+[Entity]
+PName=category
+LName=カテゴリーマスター
+Comment=
+TableOption=
+Page=MAIN
+Left=50
+Top=50
+Field="ID","id","@INT","NOT NULL",0,"","",$FFFFFFFF,""
+Field="カテゴリー名","category_name","@VARCHAR","NOT NULL",,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20190314115115
+Position="MAIN",50,50
+
+[Relation]
+Entity1=choice
+Entity2=question
+RelationType1=4
+RelationType2=2
+Fields1=question_id
+Fields2=id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,1746,8254,1638,R,R
+Dependence=0
+Caption=
+PName=
+ModifiedDateTime=20190313103218
+LineMode=0
+Bar1=175
+Bar2=825
+Bar3=164
+TermPos1=R
+TermPos2=R
+
+[Relation]
+Entity1=question
+Entity2=genre
+RelationType1=3
+RelationType2=2
+Fields1=genre_id
+Fields2=id
+Cardinarity1=
+Cardinarity2=
+Position="MAIN",0,1656,8344,2252,R,R
+Dependence=0
+Caption=
+PName=
+ModifiedDateTime=20190313102942
+LineMode=0
+Bar1=166
+Bar2=834
+Bar3=225
+TermPos1=R
+TermPos2=R
+
+[Entity]
+PName=choice
+LName=選択肢マスター
+Comment=
+TableOption=
+Page=MAIN
+Left=1600
+Top=50
+Field="ID","id","@INT","NOT NULL",0,"","",$FFFFFFFF,""
+Field="問題文ID","question_id","@INT","NOT NULL",,"","",$FFFFFFFF,""
+Field="正解可否","is_correct","@INT","NOT NULL",,"","",$FFFFFFFF,""
+Field="選択肢","choice_text","@VARCHAR","NOT NULL",,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20190314115129
+Position="MAIN",1600,50
+
+[Entity]
+PName=genre
+LName=ジャンルマスター
+Comment=
+TableOption=
+Page=MAIN
+Left=550
+Top=50
+Field="ID","id","@INT","NOT NULL",0,"","",$FFFFFFFF,""
+Field="カテゴリーID","category_id","@INT","NOT NULL",,"","",$FFFFFFFF,""
+Field="ジャンル名","genre_name","@VARCHAR","NOT NULL",,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20190314115121
+Position="MAIN",550,50
+
+[Entity]
+PName=question
+LName=問題文マスター
+Comment=
+TableOption=
+Page=MAIN
+Left=1050
+Top=50
+Field="ID","id","@INT","NOT NULL",0,"","",$FFFFFFFF,""
+Field="ジャンルID","genre_id","@INT","NOT NULL",,"","",$FFFFFFFF,""
+Field="問題文","question_text","@VARCHAR","NOT NULL",,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+ModifiedDateTime=20190314115125
+Position="MAIN",1050,50
