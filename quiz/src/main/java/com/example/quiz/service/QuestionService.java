@@ -14,4 +14,8 @@ public class QuestionService {
 	public QuestionEntity getQuestion() {
 		return questionDAO.find();
 	}
+
+	public QuestionEntity getQuestion(String genreId) {
+		return questionDAO.find(genreId);
+	}
 }
