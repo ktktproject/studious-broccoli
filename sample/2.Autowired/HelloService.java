@@ -1,9 +1,3 @@
-package com.example.demo.service;
-
-import org.springframework.stereotype.Service;
-
-import com.example.demo.model.HelloModel;
-
 @Service
 public class HelloService {
 	public HelloModel getModel() {
