@@ -1,4 +1,9 @@
-﻿-- カテゴリーマスター
+drop table if exists category;
+drop table if exists choice;
+drop table if exists genre;
+drop table if exists question;
+
+-- カテゴリーマスター
 --* RestoreFromTempTable
 create table category (
   id integer not null
