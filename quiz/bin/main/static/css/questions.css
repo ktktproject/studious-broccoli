@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.quiz-question {
+	width: 100%;
+}
+
+tbody tr {
+	cursor: pointer;
+}
+
+.col1 {
+	width: 10px;
+}
+
+.col2 {
+}

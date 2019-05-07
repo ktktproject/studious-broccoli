@@ -3,8 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" th:href="@{/css/questions.css}">
+<script th:src="@{/js/questions.js}"></script>
 </head>
 <body>
-	<p th:text="${question.questionText}" />
+	<div class="container quiz-main">
+		<div class="row">
+			<div class="alert alert-primary quiz-question" role="alert">
+				<strong th:text="${question.questionText}"></strong>
+			</div>
+		</div>
+		<div class="row">
+			<table class="table table-hover">
+				<tbody>
+					<tr>
+						<th class="col1" scope="row">1</th>
+						<td class="col2" >回答1</td>
+					</tr>
+					<tr>
+						<th class="col1" scope="row">2</th>
+						<td class="col2" >回答2</td>
+					</tr>
+					<tr>
+						<th class="col1" scope="row">3</th>
+						<td class="col2" >回答3</td>
+					</tr>
+					<tr>
+						<th class="col1" scope="row">4</th>
+						<td class="col2" >回答4</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
 </body>
 </html>
